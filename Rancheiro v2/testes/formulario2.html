@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Rancho</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(0,100,0);
+            background: linear-gradient(90deg, rgba(0,100,0,1) 0%, rgba(108,255,0,1) 100%);
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            width: 30%;
+            color: white;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: solid 1px;
+            outline: none;
+            font-size: 15px;
+            width: 100%;
+            color: white;
+            letter-spacing: 2px;
+        }
+        fieldset{
+            border: 3px solid darkgreen;
+        }
+        legend{
+            border: 1px solid darkgreen;
+            padding: 10px;
+            text-align: center;
+            background-color: darkgreen;
+            border-radius: 15px;
+        }
+        .label_input{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        #submit{
+            background-color: darkolivegreen;
+            border: none;
+            padding: 15px;
+            width: 50%;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #submit:hover{
+            background-color: darkgreen;
+            cursor: pointer;
+        }
+        #nextPageButton{
+            background-color: darkolivegreen;
+            border: none;
+            padding: 15px;
+            width: 50%;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #nextPageButton:hover{
+            background-color: darkgreen;
+            cursor: pointer;
+        }
+        #fRefeicao{
+            background-color: darkolivegreen;
+            border: none;
+            padding: 15px;
+            width: 30%;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            float: right; /* Posicionamento à direita */
+        }
+        #fRefeicao:hover{
+            background-color: darkgreen;
+            cursor: pointer;
+        }
+        #previousPageButton{
+            background-color: darkolivegreen;
+            border: none;
+            padding: 15px;
+            width: 30%;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            float: left; /* Posicionamento à esquerda */
+        }
+        #previousPageButton:hover{
+            background-color: darkgreen;
+            cursor: pointer;
+        }
+
+        input::placeholder {
+        color: #FFF; /* Cor desejada */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="refeição.html">
+            <fieldset>
+                <legend><b>Formulário do Rancho</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="Segunda" id="Segunda" class="inputUser" required placeholder="Segunda-feira">
+                    <label for="Segunda" class="label_input"></label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="Terca" id="Terca" class="inputUser" required placeholder="Terça-feira"> 
+                    <label for="Terca" class="label_input"></label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="Quarta" id="Quarta" class="inputUser" required placeholder="Quarta-feira"> 
+                    <label for="Quarta" class="label_input"></label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="Quinta" id="Quinta" class="inputUser" required placeholder="Quinta-feira"> 
+                    <label for="Quinta" class="label_input"></label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="Sexta" id="Sexta" class="inputUser" required placeholder="Sexta-feira"> 
+                    <label for="Sexta" class="label_input"></label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="Sabado" id="Sabado" class="inputUser" required placeholder="Sábado"> 
+                    <label for="Sabado" class="label_input"></label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="Domingo" id="Domingo" class="inputUser" required placeholder="Domingo"> 
+                    <label for="Domingo" class="label_input"></label> 
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+        <br>
+        <button id="fRefeicao" onclick="window.location.href='refeição.html'">Próxima Página</button>
+        <button id="previousPageButton" onclick="window.history.back()">Página Anterior</button>
+    </div>
+</body>
+</html>
